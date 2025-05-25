@@ -12,7 +12,6 @@ async function status(request, response) {
     postgresMaxConectionsResult?.rows?.[0]?.max_connections;
 
   const databaseName = process.env.POSTGRES_DB;
-  console.log(`banco de dados: ${databaseName}`);
 
   const postgresOpenConectionsResult = await database.query({
     text: `SELECT count(*)::int from pg_stat_activity WHERE datname = $1;`,
