@@ -32,6 +32,7 @@ const database = {
   query,
   getNewClient,
 };
+
 export default database;
 
 function getSSLValues() {
